@@ -29,7 +29,6 @@ This project is a 32-bit single-cycle RISC-V processor designed to execute a sub
   - Handles potential hazards and dependency scenarios in a single-cycle design without forwarding logic.
 
 ## Testbench Hierarchy
-Below is the block diagram illustrating the testbench hierarchy:
 
 ![Testbench Hierarchy](Block%20diagram.png)
 

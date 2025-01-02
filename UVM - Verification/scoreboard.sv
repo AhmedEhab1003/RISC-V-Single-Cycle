@@ -60,8 +60,9 @@ class scoreboard extends uvm_scoreboard;
 
   task compare_items(seq_item dut_item, seq_item expected_item);
     ins = dut_item.inst_name.name;
+
     ral_model_h.regs[dut_item.rd].read(status, dut_item.rd_value, UVM_BACKDOOR);
-    
+
     case(dut_item.inst_name)
 
       SW: 
@@ -74,7 +75,8 @@ class scoreboard extends uvm_scoreboard;
 
       LW: 
         begin
-          compare_32b(dut_item.ReadData, expected_item.rd_value, ins);
+          if (dut_item.rd)  // check next line only if rd != 0  (weird use case)  
+            compare_32b(dut_item.ReadData, expected_item.rd_value, ins);
           compare_32b(dut_item.rd_value, expected_item.rd_value, ins);
           // expected value = value in memory
           // actual value = value in rd 
@@ -107,8 +109,12 @@ class scoreboard extends uvm_scoreboard;
 
   function void compare_32b(logic[31:0] var1,var2, string ins);
     if (var1 !== var2) begin
-     `uvm_error("COMPARE",$sformatf("%s: Comparison Mismatch",ins));
+      `uvm_error("COMPARE",$sformatf("%s: Comparison Mismatch",ins));
       $display ("actual = %0h  , expected = %0h", var1, var2);
+      `uvm_info(get_type_name(), $sformatf("expected :\n%s", expected_item.sprint()), UVM_LOW)
+      `uvm_info(get_type_name(), $sformatf("actual :\n%s", dut_item.sprint()), UVM_LOW)
+
+      //       `uvm_info(get_type_name(), $sformatf("rs1 (x18) = %0h", temp1), UVM_LOW)
     end else begin
       // `uvm_info("COMPARE", $sformatf("%s: Comparison Match", ins), UVM_LOW);
     end

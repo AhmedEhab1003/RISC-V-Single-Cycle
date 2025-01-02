@@ -89,7 +89,7 @@ class addi_test extends base_test;
 
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
-    repeat (500) begin
+    repeat (1000) begin
       addi_seq_h.start(env_h.agent_h.sequencer_h);
     end
     #100;

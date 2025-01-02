@@ -33,7 +33,7 @@ module test;
     uvm_config_db #(string)::set(null,"*", "mem_hdl_path", mem_hdl_path);
     uvm_config_db #(string)::set(null,"*", "reg_hdl_path", reg_hdl_path);
     
-    run_test("arithmetic_test");
+    run_test("mem_acc_test");
   end
 
   initial begin

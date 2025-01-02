@@ -59,6 +59,7 @@ class ref_model extends uvm_subscriber #(seq_item);
           ral_model_h.regs[rs1].read(status, rs1_value, UVM_BACKDOOR);
           ral_model_h.regs[rs2].read(status, rs2_value, UVM_BACKDOOR);
           expected_item.rd       = expected_item.instr[11:7];
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           expected_item.rd_value = rs1_value + rs2_value;
           get_expected_pc();
           expected_item.MemWrite = 0;
@@ -71,6 +72,7 @@ class ref_model extends uvm_subscriber #(seq_item);
           ral_model_h.regs[rs1].read(status, rs1_value, UVM_BACKDOOR);
           ral_model_h.regs[rs2].read(status, rs2_value, UVM_BACKDOOR);
           expected_item.rd       = expected_item.instr[11:7];
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           expected_item.rd_value = rs1_value - rs2_value;
           get_expected_pc();
           expected_item.MemWrite = 0;
@@ -83,6 +85,7 @@ class ref_model extends uvm_subscriber #(seq_item);
           ral_model_h.regs[rs1].read(status, rs1_value, UVM_BACKDOOR);
           ral_model_h.regs[rs2].read(status, rs2_value, UVM_BACKDOOR);
           expected_item.rd       = expected_item.instr[11:7];
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           expected_item.rd_value = rs1_value & rs2_value;
           get_expected_pc();
           expected_item.MemWrite = 0;
@@ -95,6 +98,7 @@ class ref_model extends uvm_subscriber #(seq_item);
           ral_model_h.regs[rs1].read(status, rs1_value, UVM_BACKDOOR);
           ral_model_h.regs[rs2].read(status, rs2_value, UVM_BACKDOOR);
           expected_item.rd       = expected_item.instr[11:7];
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           expected_item.rd_value = rs1_value | rs2_value;
           get_expected_pc();
           expected_item.MemWrite = 0;
@@ -106,6 +110,7 @@ class ref_model extends uvm_subscriber #(seq_item);
           I_imm = expected_item.instr[31:20];
           ral_model_h.regs[rs1].read(status, rs1_value, UVM_BACKDOOR);
           expected_item.rd       = expected_item.instr[11:7];
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           expected_item.rd_value = rs1_value + sign_extend(I_imm);
           get_expected_pc();
           expected_item.MemWrite = 0;
@@ -117,6 +122,7 @@ class ref_model extends uvm_subscriber #(seq_item);
           I_imm = expected_item.instr[31:20];
           ral_model_h.regs[rs1].read(status, rs1_value, UVM_BACKDOOR);
           expected_item.rd       = expected_item.instr[11:7];
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           expected_item.rd_value = rs1_value & sign_extend(I_imm);
           get_expected_pc();
           expected_item.MemWrite = 0;
@@ -128,6 +134,7 @@ class ref_model extends uvm_subscriber #(seq_item);
           I_imm = expected_item.instr[31:20];
           ral_model_h.regs[rs1].read(status, rs1_value, UVM_BACKDOOR);
           expected_item.rd       = expected_item.instr[11:7];
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           expected_item.rd_value = rs1_value | sign_extend(I_imm);
           get_expected_pc();
           expected_item.MemWrite = 0;
@@ -144,6 +151,7 @@ class ref_model extends uvm_subscriber #(seq_item);
           get_expected_pc();
           // expected value = value in memory
           // actual value = value in rd 
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           ral_model_h.dmem.read(status, phy_mem_add, expected_item.rd_value, UVM_BACKDOOR);
           expected_item.MemWrite = 1'b0 ;
         end
@@ -151,6 +159,7 @@ class ref_model extends uvm_subscriber #(seq_item);
       JALR: 
         begin
           expected_item.rd       = expected_item.instr[11:7];
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           expected_item.rd_value = pc_current + 4;
           I_imm = expected_item.instr[31:20];
           rs1 = expected_item.instr[19:15];
@@ -204,6 +213,7 @@ class ref_model extends uvm_subscriber #(seq_item);
       JAL: 
         begin
           expected_item.rd       = expected_item.instr[11:7];
+          if (!expected_item.rd)  expected_item.rd_value = 0; else
           expected_item.rd_value = pc_current + 4;
           J_imm = {expected_item.instr[31],  
                    expected_item.instr[19:12],   
@@ -236,7 +246,7 @@ class ref_model extends uvm_subscriber #(seq_item);
     endcase
   endtask
 
-  function void get_expected_pc();
+  function void get_expected_pc();   // to be modified
     expected_item.PC = pc_current;
     pc_next = pc_current + 4;
     pc_current = pc_next;

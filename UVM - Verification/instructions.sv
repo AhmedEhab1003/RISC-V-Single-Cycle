@@ -9,7 +9,7 @@ class instruction_seq extends uvm_sequence #(seq_item) ;  // to be virtual
   rand bit [19:0] jmm;            // J immediate
   rand bit        reset;
 
-  constraint rd_c     {rd != 0;}       // don't write in x0
+  //constraint rd_c     {rd != 0;}       // don't write in x0
   constraint reset_c  {reset == 0;}    // turn off reset for now 
 
 
@@ -151,7 +151,6 @@ class addi_seq extends instruction_seq ;
 
   constraint addi_c  {opcode == 7'd19;
                       funct3 == 3'b0;} 
-  constraint imm_c   {imm inside {[0:2047]};}
 
   function new(string name = "addi_seq");
     super.new(name);

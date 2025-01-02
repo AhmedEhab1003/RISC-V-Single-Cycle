@@ -26,8 +26,8 @@ class seq_item extends uvm_sequence_item;
   `uvm_field_int(instr, UVM_DEFAULT)
   `uvm_field_enum(ins_type, inst_type, UVM_DEFAULT) 
   `uvm_field_enum(ins_name, inst_name, UVM_DEFAULT) 
-  `uvm_field_int(rd, UVM_NOPRINT)
-  `uvm_field_int(rd_value, UVM_NOPRINT)
+  `uvm_field_int(rd, UVM_DEFAULT)
+  `uvm_field_int(rd_value, UVM_DEFAULT)
   `uvm_object_utils_end
 
   function new (string name = "seq_item");

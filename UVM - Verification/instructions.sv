@@ -1,4 +1,4 @@
-class instruction_seq extends uvm_sequence #(seq_item);
+class instruction_seq extends uvm_sequence #(seq_item) ;  // to be virtual
   `uvm_object_utils (instruction_seq);
 
   rand bit [6:0]  opcode;
@@ -18,7 +18,6 @@ class instruction_seq extends uvm_sequence #(seq_item);
   endfunction
 
   task body;
-    //this.randomize();
     start_item(req);
     finish_item(req);
   endtask
@@ -26,7 +25,7 @@ endclass
 //-------------------------------------------------------------------------
 
 
-class add_seq extends instruction_seq #(seq_item);
+class add_seq extends instruction_seq ;
   `uvm_object_utils (add_seq)
 
   constraint add_c  {opcode == 7'd51;
@@ -38,12 +37,13 @@ class add_seq extends instruction_seq #(seq_item);
   endfunction
 
   task body;
+    this.randomize();
     req = seq_item::type_id::create("req");
 
     req.reset = reset;
     req.instr[6:0]   = opcode; 
     req.instr[14:12] = funct3;
-    req.instr[31:25] = funct3;
+    req.instr[31:25] = funct7;
     req.instr[19:15] = rs1;
     req.instr[24:20] = rs2;     
     req.instr[11:7]  = rd;      
@@ -55,36 +55,38 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class sub_seq extends instruction_seq #(seq_item);;
+class sub_seq extends instruction_seq ;
   `uvm_object_utils (sub_seq);
 
+
+  constraint sub_c  {opcode == 7'd51;
+                     funct3 == 3'b0;
+                     funct7 == 7'b0100000;} 
 
   function new(string name = "sub_seq");
     super.new(name);
   endfunction
 
   task body;
+    this.randomize();
     req = seq_item::type_id::create("req");
-    start_item(req);
 
-    assert(req.randomize() with {
-      req.reset == 0;
-      req.instr[6:0] == 51;           // opcode
-      req.instr[14:12] == 3'b0;       // funct3
-      req.instr[31:25] == 7'b0100000; // funct7
-      req.instr[19:15] == rs1;        // rs1
-      req.instr[24:20] == rs2;        // rs2
-      req.instr[11:7]  == rd;         // rd
-    }); 
+    req.reset = reset;
+    req.instr[6:0]   = opcode; 
+    req.instr[14:12] = funct3;
+    req.instr[31:25] = funct7;
+    req.instr[19:15] = rs1;
+    req.instr[24:20] = rs2;     
+    req.instr[11:7]  = rd;      
 
-    finish_item(req);
+    super.body;
   endtask
 
 endclass
 
 //-------------------------------------------------------------------------
 
-class and_seq extends instruction_seq #(seq_item);
+class and_seq extends instruction_seq ;
   `uvm_object_utils (and_seq);
 
 
@@ -97,12 +99,13 @@ class and_seq extends instruction_seq #(seq_item);
   endfunction
 
   task body;
+    this.randomize();
     req = seq_item::type_id::create("req");
 
     req.reset = reset;
     req.instr[6:0]   = opcode; 
     req.instr[14:12] = funct3;
-    req.instr[31:25] = funct3;
+    req.instr[31:25] = funct7;
     req.instr[19:15] = rs1;
     req.instr[24:20] = rs2;     
     req.instr[11:7]  = rd;      
@@ -113,7 +116,7 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class or_seq extends instruction_seq #(seq_item);
+class or_seq extends instruction_seq ;
   `uvm_object_utils (or_seq);
 
   constraint or_c  {opcode == 7'd51;
@@ -125,12 +128,13 @@ class or_seq extends instruction_seq #(seq_item);
   endfunction
 
   task body;
+    this.randomize();
     req = seq_item::type_id::create("req");
 
     req.reset = reset;
     req.instr[6:0]   = opcode; 
     req.instr[14:12] = funct3;
-    req.instr[31:25] = funct3;
+    req.instr[31:25] = funct7;
     req.instr[19:15] = rs1;
     req.instr[24:20] = rs2;     
     req.instr[11:7]  = rd;      
@@ -141,13 +145,13 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class addi_seq extends instruction_seq #(seq_item);
+class addi_seq extends instruction_seq ;
   `uvm_object_utils (addi_seq);
 
 
   constraint addi_c  {opcode == 7'd19;
                       funct3 == 3'b0;} 
-  constraint imm_c   {imm inside {[0:500]};}
+  constraint imm_c   {imm inside {[0:2047]};}
 
   function new(string name = "addi_seq");
     super.new(name);
@@ -170,7 +174,7 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class andi_seq extends instruction_seq #(seq_item);
+class andi_seq extends instruction_seq ;
   `uvm_object_utils (andi_seq);
 
   constraint andi_c  {opcode == 7'd19;
@@ -198,7 +202,7 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class ori_seq extends instruction_seq #(seq_item);
+class ori_seq extends instruction_seq ;
   `uvm_object_utils (ori_seq);
 
   constraint ori_c  {opcode == 7'd19;
@@ -226,7 +230,7 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class lw_seq extends instruction_seq #(seq_item);
+class lw_seq extends instruction_seq ;
   `uvm_object_utils (lw_seq);
 
   constraint lw_c    {opcode == 7'd3;
@@ -254,7 +258,7 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class jalr_seq extends instruction_seq #(seq_item);
+class jalr_seq extends instruction_seq ;
   `uvm_object_utils (jalr_seq);
 
   function new(string name = "jalr_seq");
@@ -278,7 +282,7 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class beq_seq extends instruction_seq #(seq_item);
+class beq_seq extends instruction_seq ;
   `uvm_object_utils (beq_seq);
 
   function new(string name = "beq_seq");
@@ -303,7 +307,7 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class bne_seq extends instruction_seq #(seq_item);
+class bne_seq extends instruction_seq ;
   `uvm_object_utils (bne_seq);
 
   function new(string name = "bne_seq");
@@ -328,7 +332,7 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class sw_seq extends instruction_seq #(seq_item);
+class sw_seq extends instruction_seq ;
   `uvm_object_utils (sw_seq);
 
   constraint sw_c    {opcode == 7'd35;
@@ -357,7 +361,7 @@ endclass
 
 //-------------------------------------------------------------------------
 
-class jal_seq extends instruction_seq #(seq_item);
+class jal_seq extends instruction_seq ;
   `uvm_object_utils (jal_seq);
 
   function new(string name = "jal_seq");
@@ -379,7 +383,7 @@ endclass
 //-------------------------------------------------------------------------
 
 
-class addi_seq2 extends instruction_seq #(seq_item);
+class addi_seq2 extends instruction_seq ;
   `uvm_object_utils (addi_seq2);
 
   function new(string name = "addi_seq2");
@@ -403,7 +407,7 @@ class addi_seq2 extends instruction_seq #(seq_item);
 endclass
 
 
-class res_seq extends instruction_seq #(seq_item);
+class res_seq extends instruction_seq ;
   `uvm_object_utils (res_seq);
 
   function new(string name = "res_seq");

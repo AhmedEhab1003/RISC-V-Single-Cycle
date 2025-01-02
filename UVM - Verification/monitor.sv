@@ -27,7 +27,7 @@ class monitor extends uvm_monitor;
       #1;  // avoid racing
       collect_packet(mon_pkt);
       mon_pkt.get_instruction_info();
-      //`uvm_info(get_type_name(), $sformatf("Packet Collected :\n%s", mon_pkt.sprint()), UVM_LOW)
+     // `uvm_info(get_type_name(), $sformatf("Packet Collected :\n%s", mon_pkt.sprint()), UVM_LOW)
       item_collected_port.write(mon_pkt);
     end
   endtask

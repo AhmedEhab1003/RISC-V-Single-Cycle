@@ -36,30 +36,4 @@ class env extends uvm_env;
     scoreboard_h.ref_item_port.connect(ref_model_h.expected_port);
   endfunction
 
-
-//   task run_phase(uvm_phase phase);
-
-//     phase.raise_objection(this);
-    
-// //     repeat (60) begin
-// //       ral_model_h.get_reg_by_name("x0").read(status,data, UVM_BACKDOOR);
-// //       $display("@%0t     RAL rs1 value is %0d",$time,data);
-// //       #10; 
-// //     end
-
-    
-
-// //     ral_model_h.get_reg_by_name("x13").read(status,data, UVM_BACKDOOR);
-// //     $display("RAL rs1 value is %0d",data);
-// //     ral_model_h.get_reg_by_name("x2").read(status,data, UVM_BACKDOOR);
-// //     $display("RAL rs2 value is %0d",data);
-// //     //ral_model_h.dmem.write(status,7,231, UVM_BACKDOOR);
-// //     ral_model_h.dmem.read (status,10/4,data, UVM_BACKDOOR);
-// //     $display("RAL mem value is %0d",data);
-// //     $display("target dmem value is %0d",test.DUT.dmem.RAM[10/4]);
-// //     $display("LW target reg value is %0d",test.DUT.RISC_V.dp.rf.register[5]);
-//     phase.drop_objection(this);
-
-//   endtask
-
 endclass: env

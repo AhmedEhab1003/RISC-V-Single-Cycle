@@ -2,7 +2,7 @@ import risc_tb_pkg::*;
 
 class seq_item extends uvm_sequence_item;
 
-  rand logic        reset     ; 
+  rand logic   reset     ; 
   logic [31:0] PC        ;
   logic [31:0] WriteData ;
   logic [31:0] DataAdr   ;

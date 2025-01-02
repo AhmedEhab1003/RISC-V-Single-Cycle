@@ -18,8 +18,6 @@ class scoreboard extends uvm_scoreboard;
   uvm_status_e           status;
 
   string                 ins;
-  
-  int temp1,temp2,temp3;
 
 
   function new (string name = "scoreboard", uvm_component parent = null);
@@ -54,7 +52,7 @@ class scoreboard extends uvm_scoreboard;
         #10;     // clock cycle  
         compare_items(dut_item, expected_item);
       end
-      else  #1ns; // Small delay to avoid busy-waiting , should be 5 ?
+      else  #1ns; // Small delay to avoid busy-waiting
     end
   endtask
 
@@ -63,7 +61,7 @@ class scoreboard extends uvm_scoreboard;
   task compare_items(seq_item dut_item, seq_item expected_item);
     ins = dut_item.inst_name.name;
     ral_model_h.regs[dut_item.rd].read(status, dut_item.rd_value, UVM_BACKDOOR);
-
+    
     case(dut_item.inst_name)
 
       SW: 
@@ -109,7 +107,7 @@ class scoreboard extends uvm_scoreboard;
 
   function void compare_32b(logic[31:0] var1,var2, string ins);
     if (var1 !== var2) begin
-      `uvm_error("COMPARE",$sformatf("%s: Comparison Mismatch",ins));
+     `uvm_error("COMPARE",$sformatf("%s: Comparison Mismatch",ins));
       $display ("actual = %0h  , expected = %0h", var1, var2);
     end else begin
       // `uvm_info("COMPARE", $sformatf("%s: Comparison Match", ins), UVM_LOW);

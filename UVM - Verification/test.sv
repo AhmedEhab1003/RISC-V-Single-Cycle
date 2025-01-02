@@ -1,4 +1,4 @@
-class base_test extends uvm_test;
+class base_test extends uvm_test;  // to be virtual
   `uvm_component_utils(base_test);
   env   env_h;
   agent_cnfg cfg_h;
@@ -22,16 +22,16 @@ class base_test extends uvm_test;
   endfunction  
 
 
-//   virtual function void end_of_elaboration();
-//     //print's the topology
-//     print();
-//   endfunction
+  //   virtual function void end_of_elaboration();
+  //     //print's the topology
+  //     print();
+  //   endfunction
 
 endclass
 
 /////////////////////////////////////////////////////////////////////////
 
-class test1 extends base_test;
+class test1 extends base_test;   // debugging only , to be removed
   `uvm_component_utils(test1)
 
   addi_seq    addi_seq_h;
@@ -55,16 +55,12 @@ class test1 extends base_test;
   endfunction : build_phase
 
 
-  function void report_phase(uvm_phase phase);
-  endfunction : report_phase
-
-
   task run_phase(uvm_phase phase);
 
     phase.raise_objection(this);
     addi_seq_h.start(env_h.agent_h.sequencer_h);
     addi_seq_2h.start(env_h.agent_h.sequencer_h);
-   // jal_seq_h.start(env_h.agent_h.sequencer_h);
+    // jal_seq_h.start(env_h.agent_h.sequencer_h);
     sw_seq_h.start(env_h.agent_h.sequencer_h);
     lw_seq_h.start(env_h.agent_h.sequencer_h);
     #300;
@@ -78,7 +74,7 @@ endclass
 
 class addi_test extends base_test;
   `uvm_component_utils(addi_test)
-  
+
   addi_seq  addi_seq_h;
 
   function new(string name = "addi_test",uvm_component parent=null);
@@ -103,9 +99,9 @@ class addi_test extends base_test;
 endclass
 /////////////////////////////////////////////////////////////////////////
 
-class and_test extends base_test;
-    `uvm_component_utils(and_test)
-  
+class and_test extends base_test;   // to be removed
+  `uvm_component_utils(and_test)
+
   addi_seq  addi_seq_h;
   add_seq   and_seq_h;
 
@@ -131,14 +127,14 @@ class and_test extends base_test;
     #100;
     phase.drop_objection(this);
   endtask
-  
+
 endclass
 
 /////////////////////////////////////////////////////////////////////////
 
 class mem_acc_test extends base_test;
   `uvm_component_utils(mem_acc_test)
-  
+
   addi_seq  addi_seq_h;
   sw_seq    sw_seq_h;
   lw_seq    lw_seq_h;
@@ -158,14 +154,68 @@ class mem_acc_test extends base_test;
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
     repeat (100) addi_seq_h.start(env_h.agent_h.sequencer_h);
-    
+
     repeat (100) sw_seq_h.start(env_h.agent_h.sequencer_h);
-    
+
     repeat (100) lw_seq_h.start(env_h.agent_h.sequencer_h);
-    
+
     #100;
     phase.drop_objection(this);
   endtask
 
 endclass
 /////////////////////////////////////////////////////////////////////////
+
+
+class arithmetic_test extends base_test;   // verify add addi sub
+  `uvm_component_utils(arithmetic_test)
+
+  arithmetic_seq   arithmetic_seq_h;
+
+  function new(string name = "arithmetic_test",uvm_component parent=null);
+    super.new(name,parent);
+  endfunction
+
+
+  function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    arithmetic_seq_h = arithmetic_seq::type_id::create("arithmetic_seq_h");
+  endfunction
+
+  task run_phase(uvm_phase phase);
+    phase.raise_objection(this);
+    repeat (1000) arithmetic_seq_h.start(env_h.agent_h.sequencer_h);
+    #100;
+    phase.drop_objection(this);
+  endtask
+
+endclass
+/////////////////////////////////////////////////////////////////////////
+
+class sub_test extends base_test;
+  `uvm_component_utils(sub_test)
+
+  addi_seq  addi_seq_h;
+  sub_seq   sub_seq_h;
+
+  function new(string name = "sub_test",uvm_component parent=null);
+    super.new(name,parent);
+  endfunction
+
+
+  function void build_phase(uvm_phase phase);
+    super.build_phase(phase);
+    addi_seq_h = addi_seq::type_id::create("addi_seq_h");
+    sub_seq_h = sub_seq::type_id::create("sub_seq_h");
+  endfunction
+
+  task run_phase(uvm_phase phase);
+    phase.raise_objection(this);
+    repeat (100) addi_seq_h.start(env_h.agent_h.sequencer_h);
+    repeat (1000) sub_seq_h.start(env_h.agent_h.sequencer_h);
+
+    #100;
+    phase.drop_objection(this);
+  endtask
+
+endclass

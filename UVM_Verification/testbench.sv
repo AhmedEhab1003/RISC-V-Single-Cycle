@@ -1,5 +1,7 @@
-`include "interface.sv"
+import uvm_pkg::*;
 `include "uvm_macros.svh"
+
+import risc_tb_pkg::*;
 
 module test;
   
@@ -7,7 +9,7 @@ module test;
   string mem_hdl_path = "dmem.RAM";
   string reg_hdl_path = "RISC_V.dp.rf.register[%0d]";
 
-  import uvm_pkg::*;
+  
 
   bit clk;
   bit reset;
@@ -33,7 +35,7 @@ module test;
     uvm_config_db #(string)::set(null,"*", "mem_hdl_path", mem_hdl_path);
     uvm_config_db #(string)::set(null,"*", "reg_hdl_path", reg_hdl_path);
     
-    run_test("mem_acc_test");
+    run_test();
   end
 
   initial begin

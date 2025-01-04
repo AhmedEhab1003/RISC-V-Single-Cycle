@@ -1,5 +1,5 @@
 virtual class base_test extends uvm_test;  
-  `uvm_component_utils(base_test);
+  //`uvm_component_utils(base_test);
   env   env_h;
   agent_cnfg cfg_h;
 

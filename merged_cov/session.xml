@@ -1,4 +1,4 @@
-<session version="1.1" release="O-2018.09-1" timestp="2025-01-04 11:28:41 GMT">
+<session version="1.1" release="O-2018.09-1" timestp="2025-01-04 12:48:10 GMT">
   <hvp>
     <datadef>
       <metdef name="Group" type="percent" aggregator="average" builtin="1" />
@@ -6,13 +6,13 @@
   </hvp>
   <old_coverage>
   <scope type="top" name="top">
-    <metric name="Group" value="75.6222%" />
+    <metric name="Group" value="79.7133%" />
   </scope>
   <scope type="instance" name="top">
   </scope>
   <scope type="group" name="top">
     <scope type="group" name="$unit::coverage::instruction_cg">
-      <metric name="Group" value="75.6222%" />
+      <metric name="Group" value="79.7133%" />
     </scope>
   </scope>
   <scope type="assert" name="Statistics">

@@ -61,35 +61,17 @@ $(document).ready(function () {
 Samples crossed: instruction_cp rd_cp<br clear=all>
 <table align=left>
 <tr class="sortablehead">
-<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s5">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s6">
 <td>Automatically Generated Cross Bins</td>
-<td class="rt">416</td>
-<td class="rt">172</td>
-<td class="rt">244</td>
-<td class="rt">58.65 </td>
-<td class="rt">172</td>
+<td class="rt">384</td>
+<td class="rt">128</td>
+<td class="rt">256</td>
+<td class="rt">66.67 </td>
+<td class="rt">128</td>
 </tr></table><br clear=all>
 <br clear=all>
 <span class=repname>Automatically Generated Cross Bins for cross_instruction_rd</span>
 <br clear=all>
-<br clear=all>
-<span class=repname>Element holes</span>
-<br clear=all>
-<table align=left class="sortable">
-<tr class="sortablehead">
-<td class="alfsrt">instruction_cp</td><td nowrap width=40 class="alfsrt">rd_cp</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
-<td>[unknown]</td>
-<td align=center>*</td>
-<td align=center nowrap>--</td>
-<td align=center nowrap>--</td>
-<td class="rt">32</td>
-</tr><tr class="s3">
-<td>[R_type_OR]</td>
-<td align=center>*</td>
-<td align=center nowrap>--</td>
-<td align=center nowrap>--</td>
-<td class="rt">32</td>
-</tr></table><br clear=all>
 <br clear=all>
 <span class=repname>Uncovered bins</span>
 <br clear=all>
@@ -115,22 +97,28 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 </tr><tr class="s3">
 <td>[I_type_ANDI]</td>
+<td>[all_registers_08]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[I_type_ANDI]</td>
 <td>[all_registers_0a]</td>
 <td class="rt">0</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s3">
 <td>[I_type_ANDI]</td>
-<td>[all_registers_12 , all_registers_13]</td>
-<td align=center nowrap>--</td>
-<td align=center nowrap>--</td>
-<td class="rt">2</td>
+<td>[all_registers_0c]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
 </tr><tr class="s3">
 <td>[I_type_ANDI]</td>
-<td>[all_registers_15 , all_registers_16]</td>
+<td>[all_registers_11 , all_registers_12 , all_registers_13 , all_registers_14 , all_registers_15 , all_registers_16 , all_registers_17]</td>
 <td align=center nowrap>--</td>
 <td align=center nowrap>--</td>
-<td class="rt">2</td>
+<td class="rt">7</td>
 </tr><tr class="s3">
 <td>[I_type_ANDI]</td>
 <td>[all_registers_19]</td>
@@ -138,32 +126,50 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s3">
-<td>[I_type_ORI]</td>
-<td>[all_registers_03]</td>
+<td>[I_type_ANDI]</td>
+<td>[all_registers_1e]</td>
 <td class="rt">0</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s3">
 <td>[I_type_ORI]</td>
-<td>[all_registers_08]</td>
+<td>[all_registers_01]</td>
 <td class="rt">0</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s3">
 <td>[I_type_ORI]</td>
-<td>[all_registers_0d]</td>
+<td>[all_registers_03 , all_registers_04]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[I_type_ORI]</td>
+<td>[all_registers_06]</td>
 <td class="rt">0</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s3">
 <td>[I_type_ORI]</td>
-<td>[all_registers_0f]</td>
-<td class="rt">0</td>
-<td class="rt">1</td>
-<td class="rt">1</td>
+<td>[all_registers_08 , all_registers_09]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
 </tr><tr class="s3">
 <td>[I_type_ORI]</td>
-<td>[all_registers_19]</td>
+<td>[all_registers_0b , all_registers_0c , all_registers_0d , all_registers_0e , all_registers_0f]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">5</td>
+</tr><tr class="s3">
+<td>[I_type_ORI]</td>
+<td>[all_registers_19 , all_registers_1a]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[I_type_ORI]</td>
+<td>[all_registers_1c]</td>
 <td class="rt">0</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
@@ -187,16 +193,118 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 </tr><tr class="s3">
 <td>[R_type_AND]</td>
-<td>[all_registers_00 , all_registers_01 , all_registers_02 , all_registers_03 , all_registers_04 , all_registers_05]</td>
-<td align=center nowrap>--</td>
-<td align=center nowrap>--</td>
-<td class="rt">6</td>
+<td>[all_registers_00]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
 </tr><tr class="s3">
 <td>[R_type_AND]</td>
-<td>[all_registers_07 , all_registers_08 , all_registers_09 , all_registers_0a , all_registers_0b , all_registers_0c , all_registers_0d , all_registers_0e , all_registers_0f , all_registers_10 , all_registers_11 , all_registers_12 , all_registers_13 , all_registers_14 , all_registers_15 , all_registers_16 , all_registers_17 , all_registers_18 , all_registers_19 , all_registers_1a , all_registers_1b , all_registers_1c , all_registers_1d , all_registers_1e , all_registers_1f]</td>
+<td>[all_registers_02 , all_registers_03]</td>
 <td align=center nowrap>--</td>
 <td align=center nowrap>--</td>
-<td class="rt">25</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[R_type_AND]</td>
+<td>[all_registers_07]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[R_type_AND]</td>
+<td>[all_registers_09 , all_registers_0a , all_registers_0b]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">3</td>
+</tr><tr class="s3">
+<td>[R_type_AND]</td>
+<td>[all_registers_0e , all_registers_0f]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[R_type_AND]</td>
+<td>[all_registers_12 , all_registers_13]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[R_type_AND]</td>
+<td>[all_registers_15 , all_registers_16]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[R_type_AND]</td>
+<td>[all_registers_18 , all_registers_19]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[R_type_AND]</td>
+<td>[all_registers_1b , all_registers_1c , all_registers_1d]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">3</td>
+</tr><tr class="s3">
+<td>[R_type_AND]</td>
+<td>[all_registers_1f]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[R_type_OR]</td>
+<td>[all_registers_00]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[R_type_OR]</td>
+<td>[all_registers_03]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[R_type_OR]</td>
+<td>[all_registers_05]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[R_type_OR]</td>
+<td>[all_registers_07 , all_registers_08]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[R_type_OR]</td>
+<td>[all_registers_0d]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[R_type_OR]</td>
+<td>[all_registers_0f , all_registers_10]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[R_type_OR]</td>
+<td>[all_registers_12 , all_registers_13]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[R_type_OR]</td>
+<td>[all_registers_16 , all_registers_17 , all_registers_18 , all_registers_19]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">4</td>
+</tr><tr class="s3">
+<td>[R_type_OR]</td>
+<td>[all_registers_1d , all_registers_1e , all_registers_1f]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">3</td>
 </tr></table><br clear=all>
 <br clear=all>
 <span class=repname>Covered bins</span>
@@ -541,7 +649,7 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
 <td>all_registers_01</td>
-<td class="rt">2</td>
+<td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
@@ -551,12 +659,12 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
 <td>all_registers_04</td>
-<td class="rt">3</td>
+<td class="rt">2</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
 <td>all_registers_05</td>
-<td class="rt">7</td>
+<td class="rt">4</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
@@ -570,11 +678,6 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
-<td>all_registers_08</td>
-<td class="rt">2</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ANDI</td>
 <td>all_registers_09</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
@@ -585,13 +688,8 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
-<td>all_registers_0c</td>
-<td class="rt">1</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ANDI</td>
 <td>all_registers_0d</td>
-<td class="rt">3</td>
+<td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
@@ -606,21 +704,6 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
 <td>all_registers_10</td>
-<td class="rt">3</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ANDI</td>
-<td>all_registers_11</td>
-<td class="rt">2</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ANDI</td>
-<td>all_registers_14</td>
-<td class="rt">1</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ANDI</td>
-<td>all_registers_17</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
@@ -631,7 +714,7 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
 <td>all_registers_1a</td>
-<td class="rt">5</td>
+<td class="rt">3</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
@@ -650,11 +733,6 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ANDI</td>
-<td>all_registers_1e</td>
-<td class="rt">2</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ANDI</td>
 <td>all_registers_1f</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
@@ -665,17 +743,7 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ORI</td>
-<td>all_registers_01</td>
-<td class="rt">1</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ORI</td>
 <td>all_registers_02</td>
-<td class="rt">3</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ORI</td>
-<td>all_registers_04</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
@@ -685,37 +753,12 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ORI</td>
-<td>all_registers_06</td>
-<td class="rt">1</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ORI</td>
 <td>all_registers_07</td>
 <td class="rt">2</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ORI</td>
-<td>all_registers_09</td>
-<td class="rt">1</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ORI</td>
 <td>all_registers_0a</td>
-<td class="rt">2</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ORI</td>
-<td>all_registers_0b</td>
-<td class="rt">1</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ORI</td>
-<td>all_registers_0c</td>
-<td class="rt">2</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ORI</td>
-<td>all_registers_0e</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
@@ -726,7 +769,7 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 </tr><tr class="s10">
 <td>I_type_ORI</td>
 <td>all_registers_11</td>
-<td class="rt">3</td>
+<td class="rt">2</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ORI</td>
@@ -741,12 +784,12 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 </tr><tr class="s10">
 <td>I_type_ORI</td>
 <td>all_registers_14</td>
-<td class="rt">2</td>
+<td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ORI</td>
 <td>all_registers_15</td>
-<td class="rt">2</td>
+<td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ORI</td>
@@ -765,17 +808,7 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>I_type_ORI</td>
-<td>all_registers_1a</td>
-<td class="rt">3</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ORI</td>
 <td>all_registers_1b</td>
-<td class="rt">2</td>
-<td class="rt">1</td>
-</tr><tr class="s10">
-<td>I_type_ORI</td>
-<td>all_registers_1c</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
@@ -1420,8 +1453,143 @@ Samples crossed: instruction_cp rd_cp<br clear=all>
 <td class="rt">1</td>
 </tr><tr class="s10">
 <td>R_type_AND</td>
+<td>all_registers_01</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_04</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_05</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
 <td>all_registers_06</td>
 <td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_08</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_0c</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_0d</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_10</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_11</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_14</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_17</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_1a</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_AND</td>
+<td>all_registers_1e</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_01</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_02</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_04</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_06</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_09</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_0a</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_0b</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_0c</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_0e</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_11</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_14</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_15</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_1a</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_1b</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>R_type_OR</td>
+<td>all_registers_1c</td>
+<td class="rt">1</td>
 <td class="rt">1</td>
 </tr></table><br clear=all>
 </div>

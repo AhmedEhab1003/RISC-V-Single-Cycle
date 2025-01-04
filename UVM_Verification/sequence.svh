@@ -43,7 +43,7 @@ class logic_seq extends instruction_seq;
 
   constraint opcode_c {opcode inside {51,19};}
   constraint funct3_c {funct3 inside {3'b110,3'b111};}
-  constraint funct7_c {if (opcode == 51) funct7 == 7'b0;}
+  constraint funct7_c {funct7 == 7'b0;}
 
   task body;
     ok = this.randomize();

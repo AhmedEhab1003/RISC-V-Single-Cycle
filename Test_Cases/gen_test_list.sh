@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # File to store test names
-TESTS_FILE="tests.f"
+TESTS_FILE="test_list.f"
 
 # Counter for added tests
 test_count=0

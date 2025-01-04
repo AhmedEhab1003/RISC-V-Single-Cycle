@@ -9,6 +9,7 @@ Design/alu.v
 Design/generics.v
 Design/riscvsingle.v
 Design/top.v
+
 UVM_Verification/interface.sv
 UVM_Verification/package.svh
 UVM_Verification/RAL.svh
@@ -24,7 +25,16 @@ UVM_Verification/coverage.svh
 UVM_Verification/instructions.svh
 UVM_Verification/sequence.svh
 UVM_Verification/env.svh
-UVM_Verification/test.svh
+
+Test_Cases/base_test.svh
+Test_Cases/addi_test.svh
+Test_Cases/arithmetic_test.svh
+Test_Cases/branch_test.svh
+Test_Cases/jump_test.svh
+Test_Cases/logic_test.svh
+Test_Cases/mem_acc_test.svh
+Test_Cases/sub_test.svh
+
 UVM_Verification/testbench.sv
 
 

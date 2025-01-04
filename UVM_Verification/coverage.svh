@@ -20,7 +20,7 @@ class coverage extends uvm_subscriber #(seq_item);
       bins I_type[] = {ADDI, ANDI, ORI, LW, JALR};
       bins J_type[] = {JAL};
       bins B_type[] = {BEQ, BNE};
-      bins unknown = {UNKNOWN};
+      illegal_bins unknown = {UNKNOWN};
     }
     rs1_cp: coverpoint rs1 {
       bins all_registers[] = {[0:31]};

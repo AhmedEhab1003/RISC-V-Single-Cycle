@@ -5,7 +5,7 @@ compile_cmd="vcs -sverilog -ntb_opts uvm-1.2 -f files.f -cm line+fsm+tgl+branch+
 sim_exe="./simv"
 log_file="run_all_tests.log"
 test_list="Test_Cases/test_list.f"
-coverage_dir="merged_cov"
+coverage_dir="Coverage_Report"
 vdb_files=() # Array to store .vdb directories for merging
 
 # Clean previous logs and output files

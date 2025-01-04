@@ -1,7 +1,8 @@
-virtual class base_test extends uvm_test;  
-  //`uvm_component_utils(base_test);
+virtual class base_test extends uvm_test;
+  //`uvm_component_utils(base_test)
   env   env_h;
   agent_cnfg cfg_h;
+  res_seq  res_seq_h;
 
   virtual riscv_if riscv_bus;
 
@@ -12,7 +13,7 @@ virtual class base_test extends uvm_test;
   function void build_phase (uvm_phase phase);
     env_h = env::type_id::create("env_h", this);
     cfg_h = agent_cnfg::type_id::create("cfg_h");
-
+    res_seq_h = res_seq::type_id::create("res_seq_h");
     if(!uvm_config_db #(virtual riscv_if)::get(this, "", "riscv_if", riscv_bus))
       `uvm_fatal(get_type_name(), "Failed to retrieve Interface");
 
@@ -20,4 +21,11 @@ virtual class base_test extends uvm_test;
 
     uvm_config_db #(agent_cnfg)::set(this, "*" , "configuration" , cfg_h);
   endfunction  
+
+
+  //   virtual function void end_of_elaboration();
+  //     //print's the topology
+  //     print();
+  //   endfunction
+
 endclass

@@ -8,6 +8,7 @@ class sub_test extends base_test;
     super.new(name,parent);
   endfunction
 
+
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     addi_seq_h = addi_seq::type_id::create("addi_seq_h");
@@ -16,9 +17,12 @@ class sub_test extends base_test;
 
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
+    res_seq_h.start(env_h.agent_h.sequencer_h);
     repeat (100) addi_seq_h.start(env_h.agent_h.sequencer_h);
     repeat (1000) sub_seq_h.start(env_h.agent_h.sequencer_h);
+
     #100;
     phase.drop_objection(this);
   endtask
+
 endclass

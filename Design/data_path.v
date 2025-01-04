@@ -12,7 +12,7 @@ module datapath(input wire         clk, reset,
                 output wire        Zero,
                 output wire [31:0] PC);
 
-  bit [31:0] PCNext, PCPlus4, PCTarget;
+  wire [31:0] PCNext, PCPlus4, PCTarget;
   wire [31:0] ImmExt;
   wire [31:0] SrcA, SrcB;
   wire [31:0] Result;

@@ -18,6 +18,7 @@ class scoreboard extends uvm_scoreboard;
   uvm_status_e           status;
 
   string                 ins;
+  
 
 
   function new (string name = "scoreboard", uvm_component parent = null);
@@ -43,7 +44,7 @@ class scoreboard extends uvm_scoreboard;
 
   task run_phase(uvm_phase phase);
     super.run_phase(phase);
-
+    ral_model_h.initialize;
     forever begin
 
       if (dut_q.size > 0) begin

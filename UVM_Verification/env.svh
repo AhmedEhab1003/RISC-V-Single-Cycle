@@ -20,7 +20,7 @@ class env extends uvm_env;
     ral_model_h   = ral_model::type_id::create("ral_model_h"); 
     ral_model_h.build();
     ral_model_h.lock_model();
-    ral_model_h.reset();
+    //ral_model_h.reset();
     //ral_model_h.print();
 
     uvm_config_db#(ral_model)::set(null, "*", "ral_model_h", ral_model_h);

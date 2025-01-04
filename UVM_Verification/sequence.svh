@@ -1,4 +1,3 @@
-import uvm_pkg::*;
 class arithmetic_seq extends instruction_seq;
   `uvm_object_utils (arithmetic_seq)
 
@@ -12,7 +11,7 @@ class arithmetic_seq extends instruction_seq;
                        else funct7 == 0;}
 
   task body;
-   ok = this.randomize();
+    ok = this.randomize();
     req = seq_item::type_id::create("req");
 
     req.reset = reset;
@@ -64,4 +63,30 @@ class logic_seq extends instruction_seq;
 
     super.body;
   endtask
+endclass
+
+///////////////////////////////////////////////////////////////////////////////
+
+class res_seq extends instruction_seq ;
+  `uvm_object_utils (res_seq);
+
+  constraint reset_c  {reset == 1;} 
+  constraint add_c    {opcode == 7'd51;
+                       funct3 == 3'b0;
+                       funct7 == 7'b0;}
+
+  function new(string name = "res_seq");
+    super.new(name);
+  endfunction
+
+  task body;
+    ok = this.randomize();
+    req = seq_item::type_id::create("req");
+
+    req.reset = reset;
+    req.instr[31:0]   = 32'd19; // NO OP (addi x0, x0, 0)
+
+    super.body;
+  endtask
+
 endclass

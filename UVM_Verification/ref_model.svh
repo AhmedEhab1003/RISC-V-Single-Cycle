@@ -6,6 +6,7 @@ class ref_model extends uvm_subscriber #(seq_item);
   uvm_blocking_get_imp #(seq_item, ref_model) expected_port;
 
   logic [31:0] ins_q[$];
+  logic        res_q[$];
 
   seq_item       expected_item;
   ral_model      ral_model_h;
@@ -36,11 +37,13 @@ class ref_model extends uvm_subscriber #(seq_item);
 
   function void write (seq_item t);
     ins_q.push_back(t.instr);
+    res_q.push_back(t.reset);
   endfunction
 
   task get(output seq_item t);
     expected_item = seq_item::type_id::create("expected_item");
     expected_item.instr = ins_q.pop_front;
+    expected_item.reset = res_q.pop_front;
     get_expected();
     t = expected_item;
   endtask
@@ -50,6 +53,15 @@ class ref_model extends uvm_subscriber #(seq_item);
 
     expected_item.get_instruction_info;
 
+    if(expected_item.reset) begin
+      pc_current = 0;
+      pc_next = 0;
+      expected_item.PC = 0;
+      expected_item.MemWrite = 0;
+      expected_item.rd_value = 0;
+    end
+    
+    else
     case (expected_item.inst_name)
 
       ADD: 
@@ -251,3 +263,4 @@ class ref_model extends uvm_subscriber #(seq_item);
   endfunction
 
 endclass
+

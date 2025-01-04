@@ -7,6 +7,7 @@ class logic_test extends base_test;
     super.new(name,parent);
   endfunction
 
+
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     logic_seq_h = logic_seq::type_id::create("logic_seq_h");
@@ -14,8 +15,10 @@ class logic_test extends base_test;
 
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
+    res_seq_h.start(env_h.agent_h.sequencer_h);
     repeat (100) logic_seq_h.start(env_h.agent_h.sequencer_h);
     #100;
     phase.drop_objection(this);
   endtask
+
 endclass

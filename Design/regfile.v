@@ -4,7 +4,7 @@ module regfile(input  wire        clk,
                input  wire [31:0] wd3, 
                output wire [31:0] rd1, rd2);
   
-  bit [31:0] register[31:0];  // revert to reg
+  reg [31:0] register[31:0]; 
   
   always @*  register[0] = 32'b0;
   

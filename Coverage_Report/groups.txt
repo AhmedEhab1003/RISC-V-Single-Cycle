@@ -2,11 +2,11 @@ Testbench Group List
 
 Total Groups Coverage Summary 
 SCORE  WEIGHT 
- 79.71 1      
+ 81.45 1      
 
 
 Total groups in report: 1
 -------------------------------------------------------------------------------
 SCORE  WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                            
- 79.71 1      100    1        0            64           64                    $unit::coverage::instruction_cg 
+ 81.45 1      100    1        0            64           64                    $unit::coverage::instruction_cg 
 

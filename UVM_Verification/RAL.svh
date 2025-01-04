@@ -4,11 +4,9 @@ class reg32 extends uvm_reg;
 
   uvm_reg_field field;  // register is one field
 
-
   function new(string name = "reg32");
     super.new(name, 32, UVM_NO_COVERAGE); // constructor (name , size , coverage)
   endfunction
-
 
   virtual function void build();
     field = uvm_reg_field::type_id::create("field"); 
@@ -41,9 +39,7 @@ class data_mem extends uvm_mem;
   endfunction
 endclass
 
-
 ////////////////////////////////////////////////////////////////////////////
-
 
 class ral_model extends uvm_reg_block;
   `uvm_object_utils(ral_model)
@@ -61,8 +57,6 @@ class ral_model extends uvm_reg_block;
   endfunction
 
   virtual function void build();
-    
-
 
     uvm_config_db #(string)::get(null, "", "blk_hdl_path", blk_hdl_path);
     uvm_config_db #(string)::get(null, "", "mem_hdl_path", mem_hdl_path);
@@ -91,8 +85,13 @@ class ral_model extends uvm_reg_block;
         map.add_reg(regs[i], i+500, "RO");  // Read-only access for x0
       else
         map.add_reg(regs[i], i+500, "RW");  // Read-write access
-
     end
   endfunction
+
+  task initialize;
+    uvm_status_e status;
+    for (int i=0; i <256; i++) this.dmem.write(status, i, 0, UVM_BACKDOOR);
+    for (int i=0; i <32; i++)  this.regs[i].write(status, 0, UVM_BACKDOOR);
+  endtask
 
 endclass

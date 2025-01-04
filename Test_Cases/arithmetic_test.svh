@@ -1,4 +1,4 @@
-class arithmetic_test extends base_test;
+class arithmetic_test extends base_test;   // verify add addi sub
   `uvm_component_utils(arithmetic_test)
 
   arithmetic_seq   arithmetic_seq_h;
@@ -7,6 +7,7 @@ class arithmetic_test extends base_test;
     super.new(name,parent);
   endfunction
 
+
   function void build_phase(uvm_phase phase);
     super.build_phase(phase);
     arithmetic_seq_h = arithmetic_seq::type_id::create("arithmetic_seq_h");
@@ -14,8 +15,10 @@ class arithmetic_test extends base_test;
 
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
+    res_seq_h.start(env_h.agent_h.sequencer_h);
     repeat (1000) arithmetic_seq_h.start(env_h.agent_h.sequencer_h);
     #100;
     phase.drop_objection(this);
   endtask
+
 endclass

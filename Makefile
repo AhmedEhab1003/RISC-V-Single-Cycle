@@ -15,7 +15,7 @@ cov_verdi  :
 	verdi -cov -covdir simv.vdb &
 #-------------------------------------------------------------------------------------------------------
 clean  :
-	 rm  -rf  *~  core  csrc  simv*  vc_hdrs.h  ucli.key  urg* *.log  novas.* *.fsdb* verdiLog  64* DVEfiles *.simv.daidir simv.vdb *.vcd *.vdb *.daidir *_sim
+	 rm  -rf  *~  csrc  simv*  vc_hdrs.h  ucli.key *.log  novas.* *.fsdb* verdiLog  64* DVEfiles *.vcd *.vdb *.daidir *_sim
 #-------------------------------------------------------------------------------------------------------
 coverage_html  :
 	urg -dir simv.vdb &

@@ -1,0 +1,13 @@
+alu_decoder.v
+alu.v
+control_unit.v
+data_path.v
+dmem.v
+extend.v
+files.f
+generics.v
+imem.v
+main_decoder.v
+regfile.v
+riscvsingle.v
+top.v

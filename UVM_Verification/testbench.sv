@@ -8,8 +8,9 @@ module test;
   string blk_hdl_path = "test.DUT";
   string mem_hdl_path = "dmem.RAM";
   string reg_hdl_path = "RISC_V.dp.rf.register[%0d]";
+  string PC_hdl_path  = "RISC_V.dp.pcreg.d";
 
-  
+  import uvm_pkg::*;
 
   bit clk;
   bit reset;
@@ -34,8 +35,9 @@ module test;
     uvm_config_db #(string)::set(null,"*", "blk_hdl_path", blk_hdl_path);
     uvm_config_db #(string)::set(null,"*", "mem_hdl_path", mem_hdl_path);
     uvm_config_db #(string)::set(null,"*", "reg_hdl_path", reg_hdl_path);
+    uvm_config_db #(string)::set(null,"*", "PC_hdl_path" , PC_hdl_path);
     
-    run_test();
+    run_test("mem_acc_test");
   end
 
   initial begin
@@ -44,4 +46,6 @@ module test;
   end
 
 endmodule
+
+
 

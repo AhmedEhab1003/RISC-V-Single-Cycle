@@ -1,12 +1,14 @@
-import uvm_pkg::*;
+import uvm_pkg ::*;
 class reg32 extends uvm_reg; 
   `uvm_object_utils(reg32) 
 
   uvm_reg_field field;  // register is one field
 
+
   function new(string name = "reg32");
     super.new(name, 32, UVM_NO_COVERAGE); // constructor (name , size , coverage)
   endfunction
+
 
   virtual function void build();
     field = uvm_reg_field::type_id::create("field"); 
@@ -28,6 +30,23 @@ endclass
 
 ////////////////////////////////////////////////////////////////////////////
 
+class PC_reg extends uvm_reg; 
+  `uvm_object_utils(PC_reg) 
+
+  uvm_reg_field field;  // register is one field
+
+  function new(string name = "PC_reg");
+    super.new(name, 32, UVM_NO_COVERAGE); // constructor (name , size , coverage)
+  endfunction
+
+  virtual function void build();
+    field = uvm_reg_field::type_id::create("field"); 
+    field.configure(this, 32, 0 , "RW", 0, 32'b0, 1, 1, 1);
+  endfunction
+endclass
+
+////////////////////////////////////////////////////////////////////////////
+
 class data_mem extends uvm_mem;
   `uvm_object_utils(data_mem)
   function new(string name = "data_mem");
@@ -39,18 +58,24 @@ class data_mem extends uvm_mem;
   endfunction
 endclass
 
+
 ////////////////////////////////////////////////////////////////////////////
+
 
 class ral_model extends uvm_reg_block;
   `uvm_object_utils(ral_model)
 
-  reg32 regs[32];
-  data_mem dmem;
+  reg32       regs[32];
+  PC_reg      PC_r;
+  data_mem    dmem;
   uvm_reg_map map;
+
+
 
   string blk_hdl_path;
   string mem_hdl_path;
   string reg_hdl_path;
+  string PC_hdl_path;
 
   function new(string name = "ral_model");
     super.new(name, UVM_NO_COVERAGE);
@@ -61,37 +86,44 @@ class ral_model extends uvm_reg_block;
     uvm_config_db #(string)::get(null, "", "blk_hdl_path", blk_hdl_path);
     uvm_config_db #(string)::get(null, "", "mem_hdl_path", mem_hdl_path);
     uvm_config_db #(string)::get(null, "", "reg_hdl_path", reg_hdl_path);
+    uvm_config_db #(string)::get(null, "", "PC_hdl_path" ,  PC_hdl_path);
 
     add_hdl_path(blk_hdl_path); // HDL path for reg block
-    map = create_map("map",'h0, 4, UVM_BIG_ENDIAN, 0);
 
+    // create map object
+    // Map name, Offset, Number of bytes, Endianess, byte addressing) 
+    map = create_map("map",'h0, 4, UVM_BIG_ENDIAN, 0);
     dmem = data_mem::type_id::create("dmem"); // Create mem object
     dmem.configure(this, mem_hdl_path); // Parent , HDL path
     map.add_mem( dmem, 0, "RW");
 
-    // create map object
-    // Map name, Offset, Number of bytes, Endianess, byte addressing) 
-
-
+    // Create PC register
+    PC_r = PC_reg::type_id::create("PC_r");
+    PC_r.build();
+    PC_r.configure(this,null,PC_hdl_path);
+    map.add_reg(PC_r, 'h300 , "RW");
+    
     // Create 32 registers
     foreach (regs[i]) begin
       regs[i] = reg32::type_id::create($sformatf("x%0d", i));
       regs[i].configure(this, null,$sformatf(reg_hdl_path,i) );
       regs[i].build();
 
-      // add reg to map
+      // add registers to map
       // reg, offset, access
       if (i == 0)
         map.add_reg(regs[i], i+500, "RO");  // Read-only access for x0
       else
         map.add_reg(regs[i], i+500, "RW");  // Read-write access
+
     end
   endfunction
 
   task initialize;
     uvm_status_e status;
+    this.PC_r.write(status, 32'h0, UVM_BACKDOOR);
     for (int i=0; i <256; i++) this.dmem.write(status, i, 0, UVM_BACKDOOR);
-    for (int i=0; i <32; i++)  this.regs[i].write(status, 0, UVM_BACKDOOR);
+    for (int i=0; i <32; i++ ) this.regs[i].write(status, 0, UVM_BACKDOOR);
   endtask
 
 endclass

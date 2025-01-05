@@ -2,10 +2,10 @@ Tests
 
 Total Coverage Summary 
 SCORE  GROUP  
- 81.45  81.45 
+ 80.80  80.80 
 
 
-Total tests in report: 7
+Total tests in report: 8
 -------------------------------------------------------------------------------
 Data from the following tests was used to generate this report
 addi_test/test       
@@ -13,6 +13,7 @@ arithmetic_test/test
 branch_test/test     
 jump_test/test       
 logic_test/test      
+max_pc_test/test     
 mem_acc_test/test    
 sub_test/test        
 

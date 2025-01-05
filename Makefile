@@ -3,7 +3,7 @@
 run  : clean compile logic_test
 #-------------------------------------------------------------------------------------------------------
 compile	:
-	vcs -sverilog -ntb_opts uvm-1.2 -f files.f -cm line+fsm+tgl+branch+cond -timescale=1ns/1ps +vcs+flush+all -full64  +vc -q +v2k  -fsdb -debug_all -l vcs_out.log
+	vcs -sverilog -ntb_opts uvm-1.2 -f files.f -cm line+fsm+tgl+branch+cond -timescale=1ns/1ps +vcs+flush+all -full64  +vc -q +v2k  -fsdb -debug_access+all -l vcs_out.log
 #-------------------------------------------------------------------------------------------------------
 verdi  :
 	verdi -f files.f -ssf -sv tb.fsdb &

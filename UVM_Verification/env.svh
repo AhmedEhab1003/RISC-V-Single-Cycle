@@ -7,9 +7,6 @@ class env extends uvm_env;
   ral_model           ral_model_h;
   ref_model           ref_model_h;
 
-  int data; uvm_status_e status;
-
-
   function new(string name = "env", uvm_component parent = null);
     super.new(name, parent);
   endfunction

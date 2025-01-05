@@ -19,7 +19,7 @@ class mem_acc_test extends base_test;
 
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
-    res_seq_h.start(env_h.agent_h.sequencer_h);
+   // res_seq_h.start(env_h.agent_h.sequencer_h);
     repeat (100) addi_seq_h.start(env_h.agent_h.sequencer_h);
     res_seq_h.start(env_h.agent_h.sequencer_h);
     repeat (100) sw_seq_h.start(env_h.agent_h.sequencer_h);

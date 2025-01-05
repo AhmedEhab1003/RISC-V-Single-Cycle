@@ -90,3 +90,56 @@ class res_seq extends instruction_seq ;
   endtask
 
 endclass
+
+/////////////////////////////////////////////////////////////////////
+
+
+class max_pc_seq extends instruction_seq ;
+  `uvm_object_utils (max_pc_seq);
+
+  function new(string name = "max_pc_seq");
+    super.new(name);
+  endfunction
+
+  task body;
+    req = seq_item::type_id::create("req");
+    
+    //jal x1, 'hFFFF_FFF8 
+    req.instr = 32'hFF9FF0EF;
+    req.reset = 0;
+    start_item(req);
+    finish_item(req);
+    
+    //any addi instruction - PC max (FFFF_FFFC)
+    req.instr = 32'h00500193;
+    req.reset = 0;
+    start_item(req);
+    finish_item(req);
+    
+    //any addi instruction - PC = 0 (wrap around 0)
+    req.instr = 32'h00500193;
+    req.reset = 0;
+    start_item(req);
+    finish_item(req);
+  endtask
+
+endclass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -18,21 +18,22 @@ This project is a 32-bit single-cycle RISC-V processor designed to execute a sub
   - Word-addressable 1 KB data memory (32-bit word size).
 
 - **Verification Environment:**
-  - UVM-based testbench to verify functionality.
-  - Randomized instruction sequences for thorough coverage.
-  - UVM Register Abstraction Layer (RAL) for register and memory modeling.
-  - Backdoor access for efficient memory and register verification.
+  - UVM-based self-checking testbench for comprehensive functionality verification.
+  - Supports randomized instruction generation for enhanced stimulus diversity.
+  - Includes UVM Register Abstraction Layer (RAL) for detailed register and memory modeling.
+  - Provides backdoor access for efficient and direct memory/register validation.
+  - Integrated code and functional coverage metrics to ensure thorough verification.
 
 - **Testbench Highlights:**
   - Supports custom instruction sequences using virtual class-based instruction modeling.
   - Synchronizes output sampling and register/memory readback to account for single-cycle behavior.
-  - Handles potential hazards and dependency scenarios in a single-cycle design without forwarding logic.
 
 ## Testbench Hierarchy
 
 ![Testbench Hierarchy](Block%20diagram.png)
 
-## Functional Coverage Plan
+
+## Functional Coverage 
 
 The functional coverage plan ensures thorough testing of the processor by covering key functional aspects, including instructions, control flow, registers, memory operations, and reset behavior.
 
@@ -120,7 +121,9 @@ The functional coverage plan ensures thorough testing of the processor by coveri
 ## Future Enhancements
 - Add more instructions to extend the processor's functionality.
 - Implement a pipelined version with hazard detection and forwarding logic.
-- Improve verification coverage using functional coverage models.
+- Improve testbench modularity and re-usability.
+- Improve functional coverage model.
+- Add scripts to facilitate running tests and monitoring logs and coverage reports.
 
 ## Contributions
 Feel free to fork this repository and submit pull requests. Suggestions and improvements are always welcome!

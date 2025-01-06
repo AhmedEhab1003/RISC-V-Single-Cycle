@@ -1,22 +1,22 @@
 Dashboard
 
-Date: Mon Jan  6 06:31:38 2025
+Date: Tue Jan  7 02:05:12 2025
 
 User: ICer
 
 Version: O-2018.09-1
-Command line: urg -dir addi_test.vdb -dir arithmetic_test.vdb -dir branch_test.vdb -dir jump_test.vdb -dir logic_test.vdb -dir max_pc_test.vdb -dir mem_acc_test.vdb -dir sub_test.vdb -format both -dbname MERGE_COV -report Coverage_Report 
+Command line: urg -dir addi_test.vdb -dir arithmetic_test.vdb -dir branch_test.vdb -dir full_rand_test.vdb -dir jump_test.vdb -dir logic_test.vdb -dir max_pc_test.vdb -dir mem_acc_test.vdb -dir sub_test.vdb -format both -dbname MERGE_COV -report Coverage_Report 
 
-Number of tests: 8
+Number of tests: 9
 
 -------------------------------------------------------------------------------
 Total Coverage Summary 
 SCORE  GROUP  
- 80.80  80.80 
+ 89.31  89.31 
 
 
 -------------------------------------------------------------------------------
 Total Groups Coverage Summary 
 SCORE  WEIGHT 
- 80.80 1      
+ 89.31 1      
 

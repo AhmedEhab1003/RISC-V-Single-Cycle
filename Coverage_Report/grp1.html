@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
-<title>Unified Coverage Report :: Group :: $unit::coverage::reset_cg</title>
+<title>Unified Coverage Report :: Group :: $unit::coverage::memory_operations_cg</title>
 <link type="text/css" rel="stylesheet" href="css/.urg.css">
 <link type="text/css" rel="stylesheet" href="css/.layout.css">
 <link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
@@ -47,7 +47,7 @@ $(document).ready(function () {
 </head>
 <body onLoad="initPage();"><div class="ui-layout-north">
 <div class="logo"></div>
-<center class="pagetitle">Group : $unit::coverage::reset_cg</center>
+<center class="pagetitle">Group : $unit::coverage::memory_operations_cg</center>
 <div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | hierarchy | modlist | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | asserts</div>
 
 </div>
@@ -55,12 +55,12 @@ $(document).ready(function () {
 <div>
 <div class=modhdr>
 <br clear=all>
-<span class=titlename>Group : <a href="#"  onclick="showContent('$unit::coverage::reset_cg')">$unit::coverage::reset_cg</a></span>
+<span class=titlename>Group : <a href="#"  onclick="showContent('$unit::coverage::memory_operations_cg')">$unit::coverage::memory_operations_cg</a></span>
 <br clear=all>
 <table align=left>
 <tr class="sortablehead">
 <td><b>SCORE</b></td><td>WEIGHT</td><td>GOAL</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>PRINT MISSING</td></tr><tr>
-<td class="s10 cl rt">100.00</td>
+<td class="s6 cl rt"> 68.44</td>
 <td class="wht cl rt">1     </td>
 <td class="wht cl rt">100   </td>
 <td class="wht cl rt">1     </td>
@@ -75,31 +75,121 @@ $(document).ready(function () {
 </div>
 <hr>
 <br clear=all>
-<span class=repname>Summary for Group   $unit::coverage::reset_cg
+<span class=repname>Summary for Group   $unit::coverage::memory_operations_cg
 </span>
 <br clear=all>
 <br clear=all>
-<table align=left>
+<table align=left class="sortable">
 <tr class="sortablehead">
-<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
-<td><a href="#var_tbl_$unit::coverage::reset_cg" >Variables</a></td>
-<td class="rt">2</td>
-<td class="rt">0</td>
-<td class="rt">2</td>
-<td class="rt">100.00</td>
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s9">
+<td><a href="#var_tbl_$unit::coverage::memory_operations_cg" >Variables</a></td>
+<td class="rt">47</td>
+<td class="rt">4</td>
+<td class="rt">43</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s4">
+<td><a href="#crs_tbl_$unit::coverage::memory_operations_cg" >Crosses</a></td>
+<td class="rt">1054</td>
+<td class="rt">624</td>
+<td class="rt">430</td>
+<td class="rt">61.89 </td>
 </tr></table><br clear=all>
 <br clear=all>
-<span class="repname" id="var_tbl_$unit::coverage::reset_cg">Variables for Group  $unit::coverage::reset_cg
+<span class="repname" id="var_tbl_$unit::coverage::memory_operations_cg">Variables for Group  $unit::coverage::memory_operations_cg
 </span>
 <br clear=all>
-<table align=left>
+<table align=left class="sortable">
 <tr class="sortablehead">
 <td class="alfsrt">VARIABLE</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>AUTO BIN MAX</td><td>COMMENT</td></tr><tr class="s10">
-<td><a href="#inst_tag_$unit::coverage::reset_cg.reset_active"  onclick="checkLink(this)" target="detailFrame">reset_active</a></td>
-<td class="rt">2</td>
+<td><a href="#inst_tag_$unit::coverage::memory_operations_cg.MemWrite_cp"  onclick="checkLink(this)" target="detailFrame">MemWrite_cp</a></td>
+<td class="rt">4</td>
 <td class="rt">0</td>
-<td class="rt">2</td>
+<td class="rt">4</td>
 <td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s10">
+<td><a href="#inst_tag_$unit::coverage::memory_operations_cg.DataAdr_cp"  onclick="checkLink(this)" target="detailFrame">DataAdr_cp</a></td>
+<td class="rt">35</td>
+<td class="rt">0</td>
+<td class="rt">35</td>
+<td class="rt">100.00</td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s5">
+<td><a href="#inst_tag_$unit::coverage::memory_operations_cg.WriteData_cp"  onclick="checkLink(this)" target="detailFrame">WriteData_cp</a></td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s5">
+<td><a href="#inst_tag_$unit::coverage::memory_operations_cg.ReadData_cp"  onclick="checkLink(this)" target="detailFrame">ReadData_cp</a></td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class="repname" id="crs_tbl_$unit::coverage::memory_operations_cg">Crosses for Group  $unit::coverage::memory_operations_cg
+</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CROSS</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>GOAL</td><td>WEIGHT</td><td>AT LEAST</td><td>PRINT MISSING</td><td>COMMENT</td></tr><tr class="s9">
+<td><a href="#inst_tag_$unit::coverage::memory_operations_cg.write_addr_cross"  onclick="checkLink(this)" target="detailFrame">write_addr_cross</a></td>
+<td class="rt">106</td>
+<td class="rt">3</td>
+<td class="rt">103</td>
+<td class="rt">97.17 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s9">
+<td><a href="#inst_tag_$unit::coverage::memory_operations_cg.read_addr_cross"  onclick="checkLink(this)" target="detailFrame">read_addr_cross</a></td>
+<td class="rt">106</td>
+<td class="rt">3</td>
+<td class="rt">103</td>
+<td class="rt">97.17 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s2">
+<td><a href="#inst_tag_$unit::coverage::memory_operations_cg.write_data_addr_cross"  onclick="checkLink(this)" target="detailFrame">write_data_addr_cross</a></td>
+<td class="rt">421</td>
+<td class="rt">302</td>
+<td class="rt">119</td>
+<td class="rt">28.27 </td>
+<td class="rt">100</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td></td>
+</tr><tr class="s2">
+<td><a href="#inst_tag_$unit::coverage::memory_operations_cg.read_data_addr_cross"  onclick="checkLink(this)" target="detailFrame">read_data_addr_cross</a></td>
+<td class="rt">421</td>
+<td class="rt">316</td>
+<td class="rt">105</td>
+<td class="rt">24.94 </td>
 <td class="rt">100</td>
 <td class="rt">1</td>
 <td class="rt">1</td>
@@ -112,20 +202,20 @@ $(document).ready(function () {
 <div class="ui-layout-center-inner-center">
 <div>
 <br clear=all>
-<a name="inst_tag_$unit::coverage::reset_cg.reset_active"></a><span class="repname" id="inst_tag_$unit::coverage::reset_cg.reset_active">Summary for Variable reset_active</span>
+<a name="inst_tag_$unit::coverage::memory_operations_cg.MemWrite_cp"></a><span class="repname" id="inst_tag_$unit::coverage::memory_operations_cg.MemWrite_cp">Summary for Variable MemWrite_cp</span>
 <br clear=all>
 <br clear=all>
 <table align=left>
 <tr class="sortablehead">
 <td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
 <td>User Defined Bins</td>
-<td class="rt">2</td>
+<td class="rt">4</td>
 <td class="rt">0</td>
-<td class="rt">2</td>
+<td class="rt">4</td>
 <td class="rt">100.00</td>
 </tr></table><br clear=all>
 <br clear=all>
-<span class=repname>User Defined Bins for reset_active</span>
+<span class=repname>User Defined Bins for MemWrite_cp</span>
 <br clear=all>
 <br clear=all>
 <span class=repname>Bins</span>
@@ -133,12 +223,3141 @@ $(document).ready(function () {
 <table align=left class="sortable">
 <tr class="sortablehead">
 <td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
-<td>inactive</td>
-<td class="rt">7703</td>
+<td>mem_read</td>
+<td class="rt">13112</td>
 <td class="rt">1</td>
 </tr><tr class="s10">
-<td>active</td>
+<td>mem_write</td>
+<td class="rt">501</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td class="rt">12071</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td class="rt">97</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_$unit::coverage::memory_operations_cg.DataAdr_cp"></a><span class="repname" id="inst_tag_$unit::coverage::memory_operations_cg.DataAdr_cp">Summary for Variable DataAdr_cp</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s10">
+<td>User Defined Bins</td>
+<td class="rt">35</td>
+<td class="rt">0</td>
+<td class="rt">35</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for DataAdr_cp</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">327</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">287</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">324</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>upper_quarter[d5:db]</td>
+<td class="rt">333</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">391</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">310</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">378</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">746</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[40:47]</td>
+<td class="rt">387</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[48:4f]</td>
+<td class="rt">367</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[50:57]</td>
+<td class="rt">369</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[58:5f]</td>
+<td class="rt">418</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[60:67]</td>
+<td class="rt">403</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[68:6f]</td>
+<td class="rt">396</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[70:77]</td>
+<td class="rt">394</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[78:7f]</td>
+<td class="rt">547</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[80:87]</td>
+<td class="rt">421</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[88:8f]</td>
+<td class="rt">370</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[90:97]</td>
+<td class="rt">386</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[98:9f]</td>
+<td class="rt">351</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[a0:a7]</td>
+<td class="rt">343</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[a8:af]</td>
+<td class="rt">311</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[b0:b7]</td>
+<td class="rt">356</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>middle_half[b8:bf]</td>
+<td class="rt">435</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>lower_quarter[01:07]</td>
+<td class="rt">417</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>lower_quarter[08:0e]</td>
+<td class="rt">400</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>lower_quarter[0f:15]</td>
+<td class="rt">386</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>lower_quarter[16:1c]</td>
+<td class="rt">319</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>lower_quarter[1d:23]</td>
+<td class="rt">334</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>lower_quarter[24:2a]</td>
+<td class="rt">333</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>lower_quarter[2b:31]</td>
+<td class="rt">316</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>lower_quarter[32:3f]</td>
+<td class="rt">668</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>last_location</td>
+<td class="rt">235</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>first_location</td>
+<td class="rt">855</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>sequential_access</td>
+<td class="rt">13604</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_$unit::coverage::memory_operations_cg.WriteData_cp"></a><span class="repname" id="inst_tag_$unit::coverage::memory_operations_cg.WriteData_cp">Summary for Variable WriteData_cp</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>User Defined Bins</td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for WriteData_cp</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>alternating_2863311530</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>alternating_1431655765</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>default_values</td>
+<td class="rt">11606</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>all_ones</td>
+<td class="rt">58</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>zero</td>
+<td class="rt">1949</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_$unit::coverage::memory_operations_cg.ReadData_cp"></a><span class="repname" id="inst_tag_$unit::coverage::memory_operations_cg.ReadData_cp">Summary for Variable ReadData_cp</span>
+<br clear=all>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td></tr><tr class="s5">
+<td>User Defined Bins</td>
+<td class="rt">4</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Bins for ReadData_cp</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>alternating_2863311530</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>alternating_1431655765</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Excluded/Illegal bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td class="alfsrt">STATUS</td></tr><tr class="wht">
+<td>default_values</td>
+<td class="rt">2021</td>
+<td>Excluded</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>all_ones</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>zero</td>
+<td class="rt">11591</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_$unit::coverage::memory_operations_cg.write_addr_cross"></a><span class="repname" id="inst_tag_$unit::coverage::memory_operations_cg.write_addr_cross">Summary for Cross write_addr_cross</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: MemWrite_cp DataAdr_cp<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s9">
+<td>TOTAL</td>
+<td class="rt">106</td>
+<td class="rt">3</td>
+<td class="rt">103</td>
+<td class="rt">97.17 </td>
+<td class="rt">3</td>
+</tr><tr class="s9">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">105</td>
+<td class="rt">3</td>
+<td class="rt">102</td>
+<td class="rt">97.14 </td>
+<td class="rt">3</td>
+</tr><tr class="s10">
+<td>User Defined Cross Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for write_addr_cross</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[middle_half[b8:bf]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[last_location , first_location]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>mem_read</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">310</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">272</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">309</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">317</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">372</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">298</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">366</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">719</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[40:47]</td>
+<td class="rt">377</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">350</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[50:57]</td>
+<td class="rt">354</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">407</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[60:67]</td>
+<td class="rt">383</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">372</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[70:77]</td>
+<td class="rt">378</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">533</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[80:87]</td>
+<td class="rt">401</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">353</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[90:97]</td>
+<td class="rt">372</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">329</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">326</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">293</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">340</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>middle_half[b8:bf]</td>
+<td class="rt">426</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">411</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">385</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">371</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">307</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">324</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">321</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">305</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">646</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>last_location</td>
+<td class="rt">234</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>first_location</td>
+<td class="rt">851</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>sequential_access</td>
+<td class="rt">13103</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">278</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">244</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">288</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">285</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">346</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">281</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">343</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">648</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[40:47]</td>
+<td class="rt">344</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">325</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[50:57]</td>
+<td class="rt">328</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">381</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[60:67]</td>
+<td class="rt">357</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">344</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[70:77]</td>
+<td class="rt">352</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">488</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[80:87]</td>
+<td class="rt">366</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">336</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[90:97]</td>
+<td class="rt">357</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">301</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">309</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">270</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">317</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[b8:bf]</td>
+<td class="rt">391</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">380</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">362</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">339</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">285</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">296</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">305</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">292</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">593</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>last_location</td>
+<td class="rt">210</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>first_location</td>
+<td class="rt">730</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>sequential_access</td>
+<td class="rt">12071</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[40:47]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[50:57]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[60:67]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">6</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[70:77]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[80:87]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[90:97]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>sequential_access</td>
+<td class="rt">97</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for write_addr_cross</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>write_addresses</td>
+<td class="rt">501</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_$unit::coverage::memory_operations_cg.read_addr_cross"></a><span class="repname" id="inst_tag_$unit::coverage::memory_operations_cg.read_addr_cross">Summary for Cross read_addr_cross</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: MemWrite_cp DataAdr_cp<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s9">
+<td>TOTAL</td>
+<td class="rt">106</td>
+<td class="rt">3</td>
+<td class="rt">103</td>
+<td class="rt">97.17 </td>
+<td class="rt">3</td>
+</tr><tr class="s9">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">105</td>
+<td class="rt">3</td>
+<td class="rt">102</td>
+<td class="rt">97.14 </td>
+<td class="rt">3</td>
+</tr><tr class="s10">
+<td>User Defined Cross Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for read_addr_cross</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[middle_half[b8:bf]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[last_location , first_location]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>mem_write</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">17</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">15</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">15</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">16</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">19</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">27</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[40:47]</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">17</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[50:57]</td>
+<td class="rt">15</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[60:67]</td>
+<td class="rt">20</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">24</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[70:77]</td>
+<td class="rt">16</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">14</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[80:87]</td>
+<td class="rt">20</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">17</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[90:97]</td>
+<td class="rt">14</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">22</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">17</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">18</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">16</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>middle_half[b8:bf]</td>
 <td class="rt">9</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">6</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">15</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">15</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">22</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>last_location</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>first_location</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>sequential_access</td>
+<td class="rt">501</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">278</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">244</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">288</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">285</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">346</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">281</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">343</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">648</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[40:47]</td>
+<td class="rt">344</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">325</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[50:57]</td>
+<td class="rt">328</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">381</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[60:67]</td>
+<td class="rt">357</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">344</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[70:77]</td>
+<td class="rt">352</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">488</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[80:87]</td>
+<td class="rt">366</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">336</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[90:97]</td>
+<td class="rt">357</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">301</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">309</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">270</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">317</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>middle_half[b8:bf]</td>
+<td class="rt">391</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">380</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">362</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">339</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">285</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">296</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">305</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">292</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">593</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>last_location</td>
+<td class="rt">210</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>first_location</td>
+<td class="rt">730</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>sequential_access</td>
+<td class="rt">12071</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[40:47]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[50:57]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[60:67]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">6</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[70:77]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[80:87]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[90:97]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>sequential_access</td>
+<td class="rt">97</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for read_addr_cross</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>write_addresses</td>
+<td class="rt">13112</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_$unit::coverage::memory_operations_cg.write_data_addr_cross"></a><span class="repname" id="inst_tag_$unit::coverage::memory_operations_cg.write_data_addr_cross">Summary for Cross write_data_addr_cross</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: MemWrite_cp WriteData_cp DataAdr_cp<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s2">
+<td>TOTAL</td>
+<td class="rt">421</td>
+<td class="rt">302</td>
+<td class="rt">119</td>
+<td class="rt">28.27 </td>
+<td class="rt">302</td>
+</tr><tr class="s2">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">420</td>
+<td class="rt">302</td>
+<td class="rt">118</td>
+<td class="rt">28.10 </td>
+<td class="rt">302</td>
+</tr><tr class="s10">
+<td>User Defined Cross Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for write_data_addr_cross</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Element holes</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">WriteData_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[mem_read]</td>
+<td>[alternating_2863311530 , alternating_1431655765]</td>
+<td align=center>*</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">70</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[alternating_2863311530 , alternating_1431655765]</td>
+<td align=center>*</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">70</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[alternating_2863311530 , alternating_1431655765 , all_ones]</td>
+<td align=center>*</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">105</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">WriteData_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[mem_read]</td>
+<td>[all_ones]</td>
+<td>[upper_quarter[c0:c6] , upper_quarter[c7:cd] , upper_quarter[ce:d4] , upper_quarter[d5:db]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">4</td>
+</tr><tr class="s3">
+<td>[mem_read]</td>
+<td>[all_ones]</td>
+<td>[upper_quarter[e3:e9] , upper_quarter[ea:f0]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[mem_read]</td>
+<td>[all_ones]</td>
+<td>[middle_half[48:4f]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[mem_read]</td>
+<td>[all_ones]</td>
+<td>[middle_half[60:67]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[mem_read]</td>
+<td>[all_ones]</td>
+<td>[middle_half[88:8f]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[mem_read]</td>
+<td>[all_ones]</td>
+<td>[middle_half[98:9f] , middle_half[a0:a7] , middle_half[a8:af] , middle_half[b0:b7]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">4</td>
+</tr><tr class="s3">
+<td>[mem_read]</td>
+<td>[all_ones]</td>
+<td>[lower_quarter[1d:23]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[mem_read]</td>
+<td>[all_ones]</td>
+<td>[lower_quarter[2b:31]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[upper_quarter[c0:c6] , upper_quarter[c7:cd] , upper_quarter[ce:d4] , upper_quarter[d5:db]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">4</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[upper_quarter[e3:e9] , upper_quarter[ea:f0]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[middle_half[48:4f]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[middle_half[60:67]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[middle_half[88:8f]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[middle_half[98:9f] , middle_half[a0:a7] , middle_half[a8:af] , middle_half[b0:b7]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">4</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[lower_quarter[1d:23]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[lower_quarter[2b:31] , lower_quarter[32:3f]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[zero]</td>
+<td>[upper_quarter[c0:c6]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[zero]</td>
+<td>[upper_quarter[ce:d4] , upper_quarter[d5:db] , upper_quarter[dc:e2] , upper_quarter[e3:e9] , upper_quarter[ea:f0] , upper_quarter[f1:fe] , middle_half[40:47]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">7</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[zero]</td>
+<td>[middle_half[50:57] , middle_half[58:5f] , middle_half[60:67] , middle_half[68:6f]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">4</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[zero]</td>
+<td>[middle_half[90:97] , middle_half[98:9f] , middle_half[a0:a7] , middle_half[a8:af] , middle_half[b0:b7] , middle_half[b8:bf] , lower_quarter[01:07]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">7</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[zero]</td>
+<td>[lower_quarter[0f:15] , lower_quarter[16:1c] , lower_quarter[1d:23] , lower_quarter[24:2a] , lower_quarter[2b:31]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">5</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[zero]</td>
+<td>[last_location , first_location]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">WriteData_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>middle_half[40:47]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>middle_half[50:57]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>middle_half[70:77]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>middle_half[80:87]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>middle_half[90:97]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>middle_half[b8:bf]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>last_location</td>
+<td class="rt">21</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>first_location</td>
+<td class="rt">8</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>all_ones</td>
+<td>sequential_access</td>
+<td class="rt">57</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">42</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">16</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">28</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">54</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">36</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">45</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">38</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">86</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[40:47]</td>
+<td class="rt">34</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">42</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[50:57]</td>
+<td class="rt">44</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">47</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[60:67]</td>
+<td class="rt">53</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">43</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[70:77]</td>
+<td class="rt">40</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">81</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[80:87]</td>
+<td class="rt">67</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">42</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[90:97]</td>
+<td class="rt">57</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">46</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">34</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">28</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">20</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>middle_half[b8:bf]</td>
+<td class="rt">56</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">38</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">45</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">64</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">19</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">26</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">34</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">44</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">73</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>last_location</td>
+<td class="rt">24</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>first_location</td>
+<td class="rt">429</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_read</td>
+<td>zero</td>
+<td>sequential_access</td>
+<td class="rt">1866</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[40:47]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[50:57]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[70:77]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[80:87]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[90:97]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[b8:bf]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>last_location</td>
+<td class="rt">21</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>first_location</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>sequential_access</td>
+<td class="rt">53</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">40</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">23</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">44</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">33</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">36</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">36</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">73</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[40:47]</td>
+<td class="rt">31</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">39</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[50:57]</td>
+<td class="rt">41</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">44</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[60:67]</td>
+<td class="rt">52</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">39</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[70:77]</td>
+<td class="rt">37</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">77</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[80:87]</td>
+<td class="rt">63</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">37</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[90:97]</td>
+<td class="rt">54</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">42</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">32</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">25</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">17</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[b8:bf]</td>
+<td class="rt">46</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">30</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">40</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">59</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">17</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">19</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">32</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">40</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">66</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>last_location</td>
+<td class="rt">21</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>first_location</td>
+<td class="rt">355</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>sequential_access</td>
+<td class="rt">1651</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[70:77]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[80:87]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>sequential_access</td>
+<td class="rt">8</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for write_data_addr_cross</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>write_data_at_addr</td>
+<td class="rt">75</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<hr>
+<br clear=all>
+<a name="inst_tag_$unit::coverage::memory_operations_cg.read_data_addr_cross"></a><span class="repname" id="inst_tag_$unit::coverage::memory_operations_cg.read_data_addr_cross">Summary for Cross read_data_addr_cross</span>
+<br clear=all>
+<br clear=all>
+Samples crossed: MemWrite_cp ReadData_cp DataAdr_cp<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">CATEGORY</td><td>EXPECTED</td><td>UNCOVERED</td><td>COVERED</td><td>PERCENT</td><td>MISSING</td></tr><tr class="s2">
+<td>TOTAL</td>
+<td class="rt">421</td>
+<td class="rt">316</td>
+<td class="rt">105</td>
+<td class="rt">24.94 </td>
+<td class="rt">316</td>
+</tr><tr class="s2">
+<td>Automatically Generated Cross Bins</td>
+<td class="rt">420</td>
+<td class="rt">316</td>
+<td class="rt">104</td>
+<td class="rt">24.76 </td>
+<td class="rt">316</td>
+</tr><tr class="s10">
+<td>User Defined Cross Bins</td>
+<td class="rt">1</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">100.00</td>
+<td></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Automatically Generated Cross Bins for read_data_addr_cross</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Element holes</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">ReadData_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[mem_write]</td>
+<td>[alternating_2863311530 , alternating_1431655765 , all_ones]</td>
+<td align=center>*</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">105</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[alternating_2863311530 , alternating_1431655765]</td>
+<td align=center>*</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">70</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[alternating_2863311530 , alternating_1431655765 , all_ones]</td>
+<td align=center>*</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">105</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Uncovered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">ReadData_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td><td>NUMBER</td></tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[upper_quarter[c0:c6] , upper_quarter[c7:cd] , upper_quarter[ce:d4] , upper_quarter[d5:db] , upper_quarter[dc:e2] , upper_quarter[e3:e9] , upper_quarter[ea:f0] , upper_quarter[f1:fe] , middle_half[40:47] , middle_half[48:4f] , middle_half[50:57] , middle_half[58:5f] , middle_half[60:67] , middle_half[68:6f] , middle_half[70:77] , middle_half[78:7f] , middle_half[80:87] , middle_half[88:8f] , middle_half[90:97] , middle_half[98:9f]]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">20</td>
+</tr><tr class="s3">
+<td>[read_burst]</td>
+<td>[all_ones]</td>
+<td>[middle_half[a8:af] , middle_half[b0:b7] , middle_half[b8:bf] , lower_quarter[01:07] , lower_quarter[08:0e] , lower_quarter[0f:15] , lower_quarter[16:1c] , lower_quarter[1d:23] , lower_quarter[24:2a] , lower_quarter[2b:31] , lower_quarter[32:3f] , last_location , first_location]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">13</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[zero]</td>
+<td>[middle_half[b8:bf]]</td>
+<td class="rt">0</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s3">
+<td>[write_burst]</td>
+<td>[zero]</td>
+<td>[last_location , first_location]</td>
+<td align=center nowrap>--</td>
+<td align=center nowrap>--</td>
+<td class="rt">2</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Covered bins</span>
+<br clear=all>
+<table align=left class="sortable">
+<tr class="sortablehead">
+<td class="alfsrt">MemWrite_cp</td><td class="alfsrt">ReadData_cp</td><td class="alfsrt">DataAdr_cp</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">9</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">8</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">9</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">8</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">8</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">9</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">21</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[40:47]</td>
+<td class="rt">9</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">13</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[50:57]</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">8</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[60:67]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[70:77]</td>
+<td class="rt">9</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">9</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[80:87]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[90:97]</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">12</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>middle_half[b8:bf]</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">11</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">10</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">6</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">8</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">17</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>last_location</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>first_location</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>mem_write</td>
+<td>zero</td>
+<td>sequential_access</td>
+<td class="rt">326</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>all_ones</td>
+<td>sequential_access</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">242</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">204</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">269</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">226</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">287</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">245</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">316</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">571</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[40:47]</td>
+<td class="rt">288</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">295</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[50:57]</td>
+<td class="rt">289</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">365</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[60:67]</td>
+<td class="rt">308</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">290</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[70:77]</td>
+<td class="rt">312</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">438</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[80:87]</td>
+<td class="rt">324</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">313</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[90:97]</td>
+<td class="rt">309</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">269</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">259</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">230</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">301</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>middle_half[b8:bf]</td>
+<td class="rt">340</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">317</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">318</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">304</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">254</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">283</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">269</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">277</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">519</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>last_location</td>
+<td class="rt">189</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>first_location</td>
+<td class="rt">617</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>read_burst</td>
+<td>zero</td>
+<td>sequential_access</td>
+<td class="rt">10637</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>upper_quarter[c0:c6]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>upper_quarter[c7:cd]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>upper_quarter[ce:d4]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>upper_quarter[d5:db]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>upper_quarter[dc:e2]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>upper_quarter[e3:e9]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>upper_quarter[ea:f0]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>upper_quarter[f1:fe]</td>
+<td class="rt">7</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[40:47]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[48:4f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[50:57]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[58:5f]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[60:67]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[68:6f]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[70:77]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[78:7f]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[80:87]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[88:8f]</td>
+<td class="rt">5</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[90:97]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[98:9f]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[a0:a7]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[a8:af]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>middle_half[b0:b7]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[01:07]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[08:0e]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[0f:15]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[16:1c]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[1d:23]</td>
+<td class="rt">3</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[24:2a]</td>
+<td class="rt">1</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[2b:31]</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>lower_quarter[32:3f]</td>
+<td class="rt">4</td>
+<td class="rt">1</td>
+</tr><tr class="s10">
+<td>write_burst</td>
+<td>zero</td>
+<td>sequential_access</td>
+<td class="rt">85</td>
+<td class="rt">1</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>User Defined Cross Bins for read_data_addr_cross</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Bins</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>COUNT</td><td>AT LEAST</td></tr><tr class="s10">
+<td>read_data_at_addr</td>
+<td class="rt">11266</td>
 <td class="rt">1</td>
 </tr></table><br clear=all>
 </div>
@@ -147,7 +3366,21 @@ $(document).ready(function () {
 <div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
   <ul>
     <li>
-      <a href="#inst_tag_$unit::coverage::reset_cg.reset_active">Variable : reset_active</a>    </li>
+      <a href="#inst_tag_$unit::coverage::memory_operations_cg.MemWrite_cp">Variable : MemWrite_cp</a>    </li>
+    <li>
+      <a href="#inst_tag_$unit::coverage::memory_operations_cg.DataAdr_cp">Variable : DataAdr_cp</a>    </li>
+    <li>
+      <a href="#inst_tag_$unit::coverage::memory_operations_cg.WriteData_cp">Variable : WriteData_cp</a>    </li>
+    <li>
+      <a href="#inst_tag_$unit::coverage::memory_operations_cg.ReadData_cp">Variable : ReadData_cp</a>    </li>
+    <li>
+      <a href="#inst_tag_$unit::coverage::memory_operations_cg.write_addr_cross">Cross : write_addr_cross</a>    </li>
+    <li>
+      <a href="#inst_tag_$unit::coverage::memory_operations_cg.read_addr_cross">Cross : read_addr_cross</a>    </li>
+    <li>
+      <a href="#inst_tag_$unit::coverage::memory_operations_cg.write_data_addr_cross">Cross : write_data_addr_cross</a>    </li>
+    <li>
+      <a href="#inst_tag_$unit::coverage::memory_operations_cg.read_data_addr_cross">Cross : read_data_addr_cross</a>    </li>
   </ul>
 </div>
 </div>

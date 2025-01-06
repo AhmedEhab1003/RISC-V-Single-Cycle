@@ -16,7 +16,7 @@ class logic_test extends base_test;
   task run_phase(uvm_phase phase);
     phase.raise_objection(this);
     res_seq_h.start(env_h.agent_h.sequencer_h);
-    repeat (100) logic_seq_h.start(env_h.agent_h.sequencer_h);
+    repeat (1000) logic_seq_h.start(env_h.agent_h.sequencer_h);
     #100;
     phase.drop_objection(this);
   endtask

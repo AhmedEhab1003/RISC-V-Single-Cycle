@@ -35,6 +35,7 @@ Test_Cases/logic_test.svh
 Test_Cases/mem_acc_test.svh
 Test_Cases/sub_test.svh
 Test_Cases/max_pc_test.svh
+Test_Cases/full_rand_test.svh
 
 UVM_Verification/testbench.sv
 

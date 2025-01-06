@@ -1,6 +1,7 @@
 addi_test
 arithmetic_test
 branch_test
+full_rand_test
 jump_test
 logic_test
 max_pc_test

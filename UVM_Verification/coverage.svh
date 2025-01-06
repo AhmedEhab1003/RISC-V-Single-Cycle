@@ -21,6 +21,8 @@ class coverage extends uvm_subscriber #(seq_item);
 
 
   covergroup instruction_cg;
+
+    // all instructions
     instruction_cp: coverpoint instruction {
       bins R_type[] = {ADD, SUB, AND, OR};
       bins I_type[] = {ADDI, ANDI, ORI, LW, JALR};
@@ -30,7 +32,8 @@ class coverage extends uvm_subscriber #(seq_item);
       illegal_bins unknown = {UNKNOWN};
     }
 
-    instruction_transition_cp: coverpoint instruction {
+    // Control flow patterns
+    control_flow_cp: coverpoint instruction {
       bins r_after_r = ([ADD:OR] => [ADD:OR]);
       bins r_after_i = ([ADDI:ORI] => [ADD:OR]);
       bins i_after_r = ([ADD:OR] => [ADDI:ORI]);
@@ -38,26 +41,51 @@ class coverage extends uvm_subscriber #(seq_item);
       bins load_after_compute = ([ADD:ORI] => LW);
       bins store_after_load = (LW => SW);
       bins load_after_store = (SW => LW);
+      bins branch_after_branch = (BEQ,BNE => BEQ,BNE);
+      bins jump_after_branch = (BEQ,BNE => JAL,JALR);
+      bins branch_after_jump = (JAL,JALR => BEQ,BNE);
       bins jump_sequences = (JAL,JALR => [ADD:SW]);
     }
 
-    rs1_cp:    coverpoint rs1   {bins all_registers[] = {[0:31]};}
+    // all registers
+    rs1_cp: coverpoint rs1   {bins all_registers[] = {[0:31]};}
+    rs2_cp: coverpoint rs2   {bins all_registers[] = {[0:31]};}
+    rd_cp:  coverpoint rd    {bins all_registers[] = {[0:31]};}
 
-    rs2_cp:    coverpoint rs2   {bins all_registers[] = {[0:31]};}
+    // Program Counter
+    PC_max_cp: coverpoint PC {bins pc_boundary[]   = {32'h0 ,32'hffff_fffc};
+                              bins wrap_arround    = (32'hffff_fffc => 32'h0);
+                             }
 
-    rd_cp:     coverpoint rd    {bins all_registers[] = {[0:31]};}
-
-    PC_max_cp: coverpoint PC    {bins pc_boundary[]   = {32'h0 ,32'hffff_fffc};
-                                 bins wrap_arround    = (32'hffff_fffc => 32'h0);
-                                }
-
-
-    // Immediate value coverage
+    // I-immediate value coverage
     I_imm_cp: coverpoint I_imm {
-      bins zero = {0};
-      bins pos[16] = {[1:32'h7FF]};
-      bins neg[16] = {[32'h800:32'hFFF]};
+      bins zero = {12'h000};      
+      bins positive[8] = {[12'h001:12'h7FF]};
+      bins negative[8] = {[12'h800:12'hFFF]};
     }
+
+    // S-immediate value coverage
+    S_imm_cp: coverpoint S_imm {
+      bins zero = {12'h000};                    
+      bins positive[8] = {[12'h001:12'h7FF]};    
+      bins negative[8] = {[12'h800:12'hFFF]};     
+    }
+
+    // B-immediate value coverage
+    B_imm_cp: coverpoint B_imm {
+      bins zero = {12'h000};                     
+      bins positive[8] = {[12'h001:12'h7FF]};   
+      bins negative[8] = {[12'h800:12'hFFF]};   
+    }
+
+    // J-immediate value coverage
+    J_imm_cp: coverpoint J_imm {
+      bins zero = {20'h00000};                  
+      bins positive[8] = {[20'h00001:20'h7FFFF]};
+      bins negative[8] = {[20'h80000:20'hFFFFF]}; 
+    }
+
+    
 
     // Cross coverage for all regs as rs1 with R-type instructions
     R_instr_src1_cross: cross instruction_cp, rs1_cp {
@@ -86,17 +114,27 @@ class coverage extends uvm_subscriber #(seq_item);
     // Cross coverage for i_imm with I-type instructions
     I_instr_imm_cross: cross instruction_cp, I_imm {
       bins i_type_imm = binsof(instruction_cp.I_type) && binsof(I_imm);
+      ignore_bins non_i_type = !binsof(instruction_cp.I_type);
     }
-
-    // // Cross coverage for all regs as rs1 with B-type instructions
-    // B_instr_src1_cross: cross instruction_cp, rs1_cp{
-    //   bins b_type_src1 = binsof(instruction_cp.B_type) && binsof(rs1_cp);
-    // }
-
-    // // Cross coverage for all regs as rs2 with B-type instructions
-    // B_instr_src2_cross: cross instruction_cp, rs2_cp{
-    //   bins b_type_src2 = binsof(instruction_cp.B_type) && binsof(rs2_cp);
-    // }
+    
+    // Cross coverage for S_imm with S-type instructions
+    S_instr_imm_cross: cross instruction_cp, S_imm {
+      bins S_type_imm = binsof(instruction_cp.S_type) && binsof(S_imm);
+      ignore_bins non_S_type = !binsof(instruction_cp.S_type);
+    }
+    
+    // Cross coverage for J_imm with J-type instructions
+    J_instr_imm_cross: cross instruction_cp, J_imm {
+      bins J_type_imm = binsof(instruction_cp.J_type) && binsof(J_imm);
+      ignore_bins non_J_type = !binsof(instruction_cp.J_type);
+    }
+    
+    // Cross coverage for B_imm with B-type instructions
+    B_instr_imm_cross: cross instruction_cp,B_imm {
+      bins B_type_imm = binsof(instruction_cp.B_type) && binsof(B_imm);
+      ignore_bins non_B_type = !binsof(instruction_cp.B_type);
+    }
+    
   endgroup
 
   covergroup memory_operations_cg;
@@ -104,6 +142,8 @@ class coverage extends uvm_subscriber #(seq_item);
     MemWrite_cp: coverpoint MemWrite {
       bins mem_write = {1};
       bins mem_read  = {0};
+      bins write_burst = (1[*4]);          // 4 consecutive writes
+      bins read_burst  = (0[*4]);          // 4 consecutive reads
     }
 
     // Cover data address, Total addressable words: 256 
